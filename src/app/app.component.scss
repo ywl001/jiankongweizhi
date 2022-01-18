@@ -1,0 +1,74 @@
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: blanchedalmond;
+  justify-content: space-between;
+  padding: 5px;
+  border: solid 1px #888888;
+}
+
+.btn {
+  cursor: pointer;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 3px;
+  border-bottom: solid 1px #888888;
+  background-repeat: no-repeat;
+}
+
+.login {
+  background-image: url('~src/assets/login.png');
+
+  &:hover {
+    background-image: url('~src/assets/login_over.png');
+  }
+}
+
+.logined {
+  background-image: url('~src/assets/logout.png')
+}
+
+.vec-map{
+  background-image: url('~src/assets/vecmap.png');
+  &:hover {
+    background-image: url('~src/assets/vecmap_over.png');
+  }
+}
+
+.img-map{
+  background-image: url('~src/assets/imgmap.png')
+}
+
+.search{
+  background-image: url('~src/assets/search2.png')
+}
+
+.panorama{
+  background-image: url('~src/assets/panoramic.png');
+}
+
+#welcome {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 16px;
+  color: brown;
+}
+
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+}

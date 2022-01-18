@@ -1,0 +1,19 @@
+<mat-card class="card" (resized)="onResized($event)">
+  <mat-card-header>
+    <mat-card-title>{{camera?.monitorID}}{{camera?.name}}</mat-card-title>
+    <mat-card-subtitle>{{camera?.type}}　{{camera?.owner}}　{{camera?.telephone}}<span style="color:red">　{{camera?.displayLevel|number}}</span></mat-card-subtitle>
+  </mat-card-header>
+
+  <div *ngIf="imgUrls" class="div_img">
+    <img *ngFor="let imgObj of imgUrls;let i = index" style="margin-right: 2px;"
+      src="/monitorBaidu/monitor_image/{{imgObj.thumbUrl}}" height="200" (click)="onImageClick(i)">
+  </div>
+  <mat-card-actions *ngIf="isShowButton">
+    <button mat-button id="btnUpload" (click)="onAddFile()">图像</button>
+    <input type="file" name="Filedata" style="display:none" id="inputFile" ng2FileSelect [uploader]="uploader" multiple 
+      (onFileSelected)="onUpload($event)">
+    <button mat-button id="btnMove" (click)="onMove()">位置</button>
+    <button mat-button id="btnDel" (click)="onDel()">删除</button>
+    <button mat-button id="btnDel" (click)="onEdit()">编辑</button>
+  </mat-card-actions>
+</mat-card>
